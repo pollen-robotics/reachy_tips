@@ -1,0 +1,10 @@
+# Rules for RPLIDAR S2
+KERNEL=="ttyUSB[0-9]", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60", MODE="666", SYMLINK+="rplidar_s2"
+
+# Rules for VESC controllers
+KERNEL=="ttyACM[0-9]", ATTRS{idVendor}=="05e3", ATTRS{idProduct}=="0610", MODE="666", SYMLINK+="vesc_wheels"
+
+# Rules for the 3 gates
+KERNEL=="ttyUSB[0-9]", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6015", ATTRS{serial}=="D3096WZQ", MODE="666", SYMLINK+="gate0"
+KERNEL=="ttyUSB[0-9]", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6015", ATTRS{serial}=="D3096X0S", MODE="666", SYMLINK+="gate1"
+KERNEL=="ttyUSB[0-9]", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6015", ATTRS{serial}=="D307RR2E", MODE="666", SYMLINK+="gate2"
