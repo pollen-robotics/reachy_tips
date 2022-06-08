@@ -38,3 +38,5 @@ alias stop_teleop="systemctl --user stop reachy_teleop.service"
 alias start_sdk="sudo systemctl start reachy_sdk_server.service"
 alias stop_sdk="sudo systemctl stop reachy_sdk_server.service"
 alias launch_all="bash ~/reachy_ws/src/reachy_sdk_server/launch_all.bash"
+
+alias discovery="python3 -m reachy_pyluos_hal.discovery"
