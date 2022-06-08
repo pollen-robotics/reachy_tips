@@ -3,7 +3,7 @@ alias em='emacs -nw'
 alias gs="git status"
 alias sb="source ~/.bashrc"
 alias cb="em ~/.bashrc"
-alias ca="em ~/astuce/custom_aliases"
+alias ca="em ~/reachy_tips/custom_aliases"
 alias pwdf="readlink -f"
 alias jupyterclean="python3 -m nbconvert --ClearOutputPreprocessor.enabled=True --inplace *.ipynb **/*.ipynb"
 
@@ -24,9 +24,10 @@ alias rtz='ros2 topic hz /turtle1/pose'
 
 alias ccd='colcon_cd'
 alias gow="cd ~/reachy_ws/src && ls"
-alias colb="bash ~/astuce/compile_colcon_ros2.bash"
-alias latestlog="bash ~/astuce/latest_log.bash"
+alias colb="cd ~/ros_ws &&  bash ~/reachy_tips/compile_colcon_ros2.bash"
+alias colbb="bash ~/reachy_tips/compile_colcon_ros2.bash"
+alias latestlog="bash ~/reachy_tips/latest_log.bash"
 alias rb="ros2 daemon stop && ros2 daemon start"
 alias view_frames="ros2 run tf2_tools view_frames.py && evince frames.pdf"
-alias check_sim_time="bash ~/astuce/get_param_globally.sh use_sim_time"
+alias check_sim_time="bash ~/reachy_tips/get_param_globally.sh use_sim_time"
 alias killgazebo="sudo killall -9 gazebo gzserver gzclient"
