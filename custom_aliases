@@ -31,3 +31,10 @@ alias rb="ros2 daemon stop && ros2 daemon start"
 alias view_frames="ros2 run tf2_tools view_frames.py && evince frames.pdf"
 alias check_sim_time="bash ~/reachy_tips/get_param_globally.sh use_sim_time"
 alias killgazebo="sudo killall -9 gazebo gzserver gzclient"
+
+alias start_teleop="systemctl --user start reachy_teleop.service"
+alias stop_teleop="systemctl --user stop reachy_teleop.service"
+
+alias start_sdk="sudo systemctl start reachy_sdk_server.service"
+alias stop_sdk="sudo systemctl stop reachy_sdk_server.service"
+alias launch_all="bash ~/reachy_ws/src/reachy_sdk_server/launch_all.bash"
