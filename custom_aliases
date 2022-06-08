@@ -6,6 +6,8 @@ alias cb="em ~/.bashrc"
 alias ca="em ~/reachy_tips/custom_aliases"
 alias pwdf="readlink -f"
 alias jupyterclean="python3 -m nbconvert --ClearOutputPreprocessor.enabled=True --inplace *.ipynb **/*.ipynb"
+alias status_all="bash ~/reachy_tips/git-status-all"
+
 
 # ROS2 stuff
 alias roscheck="printenv | grep ROS"
