@@ -26,7 +26,7 @@ alias rtz='ros2 topic hz /turtle1/pose'
 
 alias ccd='colcon_cd'
 alias gow="cd ~/reachy_ws/src && ls"
-alias colb="cd ~/ros_ws &&  bash ~/reachy_tips/compile_colcon_ros2.bash"
+alias colb="cd ~/reachy_ws &&  bash ~/reachy_tips/compile_colcon_ros2.bash"
 alias colbb="bash ~/reachy_tips/compile_colcon_ros2.bash"
 alias latestlog="bash ~/reachy_tips/latest_log.bash"
 alias rb="ros2 daemon stop && ros2 daemon start"
