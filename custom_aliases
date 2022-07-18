@@ -7,6 +7,7 @@ alias ca="em ~/reachy_tips/custom_aliases"
 alias pwdf="readlink -f"
 alias jupyterclean="python3 -m nbconvert --ClearOutputPreprocessor.enabled=True --inplace *.ipynb **/*.ipynb"
 alias status_all="bash ~/reachy_tips/git-status-all"
+alias lint_f8="python -m flake8 . --count --show-source --statistics"
 
 
 # ROS2 stuff
@@ -34,11 +35,14 @@ alias view_frames="ros2 run tf2_tools view_frames.py && evince frames.pdf"
 alias check_sim_time="bash ~/reachy_tips/get_param_globally.sh use_sim_time"
 alias killgazebo="sudo killall -9 gazebo gzserver gzclient"
 
-alias start_teleop="systemctl --user start reachy_teleop.service"
-alias stop_teleop="systemctl --user stop reachy_teleop.service"
-
+# ROS2 stuff
+# >V1.1 :
+# alias start_sdk="systemctl start reachy_sdk_server.service"
+# alias stop_sdk="systemctl stop reachy_sdk_server.service"
+# Old version
 alias start_sdk="sudo systemctl start reachy_sdk_server.service"
 alias stop_sdk="sudo systemctl stop reachy_sdk_server.service"
+
 alias launch_all="bash ~/reachy_ws/src/reachy_sdk_server/launch_all.bash"
 
 alias discovery="python3 -m reachy_pyluos_hal.discovery"
