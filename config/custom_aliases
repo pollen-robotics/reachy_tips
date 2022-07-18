@@ -1,0 +1,69 @@
+
+# Best selling, 5/5 stars review, creme de la creme aliases
+# 'sb' solves 95% of ROS related issues, probably
+alias sb="source ~/.bashrc"
+# Compiling in ROS2 became almost repeatable since we use this build script
+# -> Try to use the same compile method everytime and if you have to change, rm build/ devel/ and install/ folders and do a full build once
+alias colb="cd ~/reachy_ws &&  bash ~/reachy_tips/scripts/compile_colcon_ros2.bash"
+
+# Reachy specific aliases
+# Prints the hardware status of the (up to) 3 gates
+alias discovery="python3 -m reachy_pyluos_hal.discovery"
+# Prints the latest ROS2 log
+alias latestlog="bash ~/reachy_tips/scripts/latest_log.bash"
+# Spectacular efficiency
+alias gow="cd ~/reachy_ws/src && ls"
+# >V1.1 :
+# alias start_sdk="systemctl start reachy_sdk_server.service"
+# alias stop_sdk="systemctl stop reachy_sdk_server.service"
+# Old version
+alias start_sdk="sudo systemctl start reachy_sdk_server.service"
+alias stop_sdk="sudo systemctl stop reachy_sdk_server.service"
+alias launch_all="bash ~/reachy_ws/src/reachy_sdk_server/launch_all.bash"
+alias colbb="bash ~/reachy_tips/scripts/compile_colcon_ros2.bash"
+
+# General purpose
+# The text editor to use for the other aliases in this file
+alias ALIAS_EDITOR='emacs -nw' # nano code vi
+# Common shortcuts
+alias em='ALIAS_EDITOR'
+alias cb="ALIAS_EDITOR ~/.bashrc"
+alias ca="ALIAS_EDITOR ~/reachy_tips/config/custom_aliases"
+alias gs="git status"
+# Prints the full path to the file given in argument of pwdf
+alias pwdf="readlink -f"
+# Use this to 'clean' the jupyter notebooks before doing a commit (so that the 'git diff' are readable afterwards)
+alias jupyterclean="python3 -m nbconvert --ClearOutputPreprocessor.enabled=True --inplace *.ipynb **/*.ipynb"
+# A script to give the git 'status' of all the git repositories where the script is called
+alias status_all="bash ~/reachy_tips/scripts/git-status-all.bash"
+# flake8 format verification of python files
+alias lint_f8="python -m flake8 . --count --show-source --statistics"
+
+
+# ROS2 stuff
+# Kills and restarts the ros2 daemon, fixes 80% of the problems 'sb' didn't fix, probably
+alias rb="ros2 daemon stop && ros2 daemon start"
+# Listens to ROS frames for 5s then creates and opens a pdf graph based on them
+# Note : 'evince' seems broken on some builds, 'qpdfview' works as a replacement
+alias view_frames="ros2 run tf2_tools view_frames.py && qpdfview frames.pdf"
+# Prints the "use_sim_time" parameter for each node alive
+alias check_sim_time="bash ~/reachy_tips/scripts/get_param_globally.bash use_sim_time"
+# Sadly, Gazebo often doesn't shut down properly. This helps.
+alias killgazebo="sudo killall -9 gazebo gzserver gzclient"
+# To check the state of environment variables for ROS
+alias roscheck="printenv | grep ROS"
+# symlink build alias (but prefer the 'colb' alias)
+alias cbs='colcon build --symlink-install'
+# colcon_cd is a disappointment
+alias ccd='colcon_cd'
+# Just to remember the syntaxes
+alias rtl='ros2 topic list'
+alias rte='ros2 topic echo'
+alias rnl='ros2 node list'
+alias testpub='ros2 run demo_nodes_cpp talker'
+alias testsub='ros2 run demo_nodes_cpp listener'
+alias ril='ros2 interface list'
+alias ris='ros2 interface show'
+alias rtz='ros2 topic hz /turtle1/pose'
+
+
