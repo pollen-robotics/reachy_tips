@@ -22,7 +22,14 @@ The repository is organized around 3 folders: config, scripts and tips.
 We recommend to read the file '[config/custom_aliases](config/custom_aliases)' as the aliases (and most scripts) are documented there.
 
 ### USB identification and udev rules
-A guide on how to identify the USB devices to create udev rules can be found in [tips/usb_identification.md](tips/usb_identification.md)
-TODO SIMON document the usage of write_udev_rules_gates.py
+A guide on how to identify the USB devices to create udev rules can be found in [tips/usb_identification.md](tips/usb_identification.md).
 
+From one Reachy to another, the gates for the arms and the head do not have the same serial id, so they need to be set for each Reachy individually. To do that automagically, use the script *write_udev_rules_gates.py*.
+
+NOTE: you need to run the script in sudo mode.
+
+```bash
+cd ~/reachy_tips/scripts
+sudo python3 write_udev_rules_gates.py
+```
 
