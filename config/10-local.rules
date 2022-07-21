@@ -1,5 +1,5 @@
 # Rules for Kurokesu camera control board
-KERNEL=="ttyACM[0-9]", KERNELS=="1-4.1", ATTRS{product}=="STM32F103C8T6", SYMLINK+="kurokesu"
+KERNEL=="ttyACM[0-9]", ATTRS{product}=="STM32F103C8T6", ATTRS{manufacturer}=="tomeko net", SYMLINK+="kurokesu"
 
 # Rules for Arduino board
 KERNEL=="ttyACM[0-9]", KERNELS=="1-2", ATTRS{product}=="Arduino Nano Every", SYMLINK+="arduino"
