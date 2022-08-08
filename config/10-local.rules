@@ -8,7 +8,7 @@ KERNEL=="ttyACM[0-9]", KERNELS=="1-2", ATTRS{product}=="Arduino Nano Every", SYM
 KERNEL=="ttyUSB[0-9]", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60", MODE="666", SYMLINK+="rplidar_s2"
 
  # Rules for VESC controllers
-KERNEL=="ttyACM[0-9]", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="5740", MODE="666", SYMLINK+="vesc_wheels"
+KERNEL=="ttyACM[0-9]", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="5740", ATTRS{product}=="ChibiOS/RT Virtual COM Port", MODE="666", SYMLINK+="vesc_wheels"
 
 # Rules for RPLIDAR S2
 KERNEL=="ttyUSB[0-9]", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60", MODE="666", SYMLINK+="rplidar_s2"
