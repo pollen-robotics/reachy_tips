@@ -31,7 +31,10 @@ do
 	then
 		mod=0
 		cd $f
-
+		# Getting the current branch
+		echo "**Branch: "$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
+		# Getting the current commit ref
+		git rev-parse HEAD
 		# Check for modified files
 		if [ $(git status | grep modified -c) -ne 0 ]
 		then

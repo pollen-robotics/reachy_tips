@@ -4,7 +4,8 @@
 alias sb="source ~/.bashrc"
 # Compiling in ROS2 became almost repeatable since we use this build script
 # -> Try to use the same compile method everytime and if you have to change, rm build/ devel/ and install/ folders and do a full build once
-alias colb="cd ~/reachy_ws &&  bash ~/reachy_tips/scripts/compile_colcon_ros2.bash"
+# Works with Foxy, to be updated for the next version
+#alias colb="cd ~/reachy_ws &&  bash ~/reachy_tips/scripts/compile_colcon_ros2.bash"
 
 # Reachy specific aliases
 # Prints the hardware status of the (up to) 3 gates
@@ -36,6 +37,7 @@ alias pwdf="readlink -f"
 alias jupyterclean="python3 -m nbconvert --ClearOutputPreprocessor.enabled=True --inplace *.ipynb **/*.ipynb"
 # A script to give the git 'status' of all the git repositories where the script is called
 alias status_all="bash ~/reachy_tips/scripts/git-status-all.bash"
+alias git_check="cd /home/pollen/reachy_ws/src; status_all; cd /home/pollen/dev; status_all; cd ~"
 # flake8 format verification of python files
 alias lint_f8="python -m flake8 . --count --show-source --statistics"
 
