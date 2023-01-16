@@ -10,4 +10,4 @@ KERNEL=="ttyUSB[0-9]", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60", MODE="
  # Rules for VESC controllers
 KERNEL=="ttyACM[0-9]", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="5740", ATTRS{product}=="ChibiOS/RT Virtual COM Port", MODE="666", SYMLINK+="vesc_wheels"
 
-# Rules for Luos gates - /!\ This line should be last in this file /!\
+# Rules for USB2AX boards - /!\ This line should be last in this file /!\
