@@ -29,7 +29,7 @@ def get_serial_number(port):
 def get_rule_msg(port, robot_part):
     """Build a udev rule given a gate serial number."""
     serial_number = get_serial_number(port[0])
-    rule = 'KERNEL=="ttyACM[0-9]", ATTRS{idVendor}=="16d0", ATTRS{Product}=="USB2AX", '
+    rule = 'KERNEL=="ttyACM[0-9]", ATTRS{idVendor}=="16d0", ATTRS{product}=="USB2AX", '
     rule += f'ATTRS{{serial}}=={serial_number}, MODE="666", SYMLINK+="usb2ax_{robot_part}"\n'
     return rule
 
